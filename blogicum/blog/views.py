@@ -44,16 +44,18 @@ posts = [
     },
 ]
 
+available_id = {posts[i]['id']: i for i in range(len(posts))}
+
 
 def index(request):
     template = 'blog/index.html'
-    context = {'posts': posts}
+    context = {'posts': reversed(posts)}
     return render(request, template, context)
 
 
 def post_detail(request, post_id):
     template = 'blog/detail.html'
-    context = {'post': posts[post_id]}
+    context = {'post': posts[available_id[post_id]]}
     return render(request, template, context)
 
 
