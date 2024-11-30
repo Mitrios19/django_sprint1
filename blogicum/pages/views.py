@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 
 def about(request):
-    template = 'homepage/index.html'
+    template = 'about.html'
     return render(request, template)
 def rules(request):
-    template = 'homepage/index.html'
+    template = 'rules.html'
     return render(request, template)
