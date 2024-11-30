@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 
 
 posts = [
@@ -55,8 +56,12 @@ def index(request):
 
 def post_detail(request, post_id):
     template = 'blog/detail.html'
-    context = {'post': posts[available_id[post_id]]}
-    return render(request, template, context)
+    if post_id in available_id:
+
+        context = {'post': posts[available_id[post_id]]}
+        return render(request, template, context)
+    else:
+        raise Http404(f'Post {post_id} Not Found')
 
 
 def category_posts(request, category_slug):
