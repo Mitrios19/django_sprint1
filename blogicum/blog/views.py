@@ -52,10 +52,10 @@ def index(request):
 
 
 def post_detail(request):
-    template = 'homepage/index.html'
+    template = 'detail.html'
     return render(request, template)
 
 
 def category_posts(request):
-    template = 'homepage/index.html'
+    template = 'category.html'
     return render(request, template)

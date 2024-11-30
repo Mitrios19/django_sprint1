@@ -16,14 +16,16 @@
               Дата: 25 октября 1659 года
             </li>
             <li>
-              Категория: <a href="not-my-day">not-my-day</a>
+              <!-- Поправить -->
+              Категория: <a href="{% url 'blog:category_posts' %}">not-my-day</a>
             </li>
           </ul>          
           <!-- Первые 10 слов -->
           <p>
             Всю ночь и весь день шел дождь и дул сильный ...
           </p>
-          <a href="detail.html">Читать полный текст</a>
+          <!-- Поправить -->
+          <a href="{% url 'blog:post_detail' %}">Читать полный текст</a>
         </article>
         <hr>
         <article>
