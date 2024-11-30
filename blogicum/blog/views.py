@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-
 posts = [
     {
         'id': 0,
@@ -44,3 +43,9 @@ posts = [
                 укутывал их, чтобы не испортились от дождя.''',
     },
 ]
+
+def _detail(request):
+
+
+def _category(request):
+
