@@ -1,3 +1,5 @@
+from tempfile import template
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -44,9 +46,15 @@ posts = [
     },
 ]
 
+def index(request):
+    template = 'index.html'
+    return render(request, template)
+
+
 def post_detail(request):
     template = 'homepage/index.html'
     return render(request, template)
+
 
 def category_posts(request):
     template = 'homepage/index.html'
