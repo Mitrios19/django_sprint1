@@ -44,8 +44,10 @@ posts = [
     },
 ]
 
-def _detail(request):
+def post_detail(request):
+    template = 'homepage/index.html'
+    return render(request, template)
 
-
-def _category(request):
-
+def category_posts(request):
+    template = 'homepage/index.html'
+    return render(request, template)
