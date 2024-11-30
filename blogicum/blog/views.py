@@ -1,8 +1,6 @@
-from tempfile import template
-
 from django.shortcuts import render
 
-# Create your views here.
+
 posts = [
     {
         'id': 0,
